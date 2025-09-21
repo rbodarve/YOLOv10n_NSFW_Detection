@@ -68,10 +68,10 @@ This directly converts a pre-trained YOLOv10n model to TensorFlow Lite format wi
 ### Automatic Dataset Detection
 
 The pipeline automatically scans for existing datasets in common locations:
-- `/content/dataset`
-- `/content/custom_dataset`  
-- `/content/yolo_dataset`
-- `/content/coco128`
+- `/dataset`
+- `/custom_dataset`  
+- `/yolo_dataset`
+- `/coco128`
 
 ### Required Dataset Structure
 
