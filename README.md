@@ -1,6 +1,6 @@
-# YOLOv10n TensorFlow Lite Conversion Pipeline
+# Tensorflow Lite and ONNX Conversion for YOLOv10n Models for NSFW Detection in Mobile
 
-A comprehensive Jupyter notebook implementation for training YOLOv10n models and converting them to TensorFlow Lite format for mobile deployment. This project provides an end-to-end pipeline from dataset preparation to TFLite model conversion, with automatic dataset detection and fallback to COCO128.
+A sample Jupyter notebook implementation for training YOLOv10n models and converting them to TensorFlow Lite format for mobile deployment. This project provides steps from dataset preparation to TFLite model conversion, with automatic dataset detection and fallback to one of the default datasets, COCO128. The program was done in Google Colab and as such its designed for execution in cloud environments, only changing datapaths for easier integration to other environments.
 
 ## Features
 
@@ -73,16 +73,18 @@ The pipeline automatically scans for existing datasets in common locations:
 - `/yolo_dataset`
 - `/coco128`
 
+or if its done on Google Colab
+- `/content/dataset`
+- `/content/custom_dataset`  
+- `/content/yolo_dataset`
+- `/content/coco128`
+
 ### Required Dataset Structure
 
 ```
 dataset/
 ├── images/
-│   ├── train2017/
-│   └── val2017/
 ├── labels/
-│   ├── train2017/
-│   └── val2017/
 └── dataset.yaml
 ```
 
@@ -117,7 +119,7 @@ onnx_path, tf_path = export_model_formats(model)
 ```
 - Exports to ONNX format
 - Attempts direct TensorFlow export
-- Handles conversion errors gracefully
+- Handles conversion errors
 
 ### TensorFlow Lite Conversion
 ```python
@@ -260,9 +262,3 @@ For issues and questions:
 3. Ensure all dependencies are properly installed
 4. Review TensorFlow Lite documentation for deployment issues
 
-## Changelog
-
-- **v1.0**: Initial YOLOv10n training and TFLite conversion
-- **v1.1**: Added automatic dataset detection
-- **v1.2**: Improved error handling and fallback methods
-- **v1.3**: Enhanced mobile optimization settings
