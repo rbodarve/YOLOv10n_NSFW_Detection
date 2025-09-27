@@ -1,6 +1,6 @@
-# Tensorflow Lite and ONNX Conversion for YOLOv10n Models for NSFW Detection in Mobile
+# Model Conversion for YOLOv10n Models for NSFW Detection in Mobile
 
-A sample Jupyter notebook implementation for training YOLOv10n models and converting them to TensorFlow Lite format for mobile deployment. This project provides steps from dataset preparation to TFLite model conversion, with automatic dataset detection and fallback to one of the default datasets, COCO128. The program was done in Google Colab and as such its designed for execution in cloud environments, only changing datapaths for easier integration to other environments.
+A simple Jupyter notebook implementation for training YOLOv10n models and converting them to TensorFlow Lite format for mobile deployment. This project provides steps from dataset preparation to TFLite model conversion, with automatic dataset detection and fallback to one of the default datasets, COCO128. The program was done in Google Colab and as such its designed for execution in cloud environments, only changing datapaths for easier integration to other environments.
 
 ## Features
 
